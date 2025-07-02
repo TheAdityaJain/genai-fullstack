@@ -1,5 +1,5 @@
-transformers==4.36.2
-tokenizers==0.13.3
-torch==2.2.2
 flask
 flask-cors
+torch==2.5.1
+transformers==4.36.2
+tokenizers==0.13.3
