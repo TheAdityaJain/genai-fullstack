@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from story_generator import generate_story, get_prompt, generate_title
+from story_generator import generate_story, generate_title
 from flask_cors import CORS
 import os
 
