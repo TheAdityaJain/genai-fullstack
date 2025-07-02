@@ -21,7 +21,8 @@ function App() {
   const [story, setStory] = useState(null)
   const [showScrollIndicator, setShowScrollIndicator] = useState(false)
   const storyRef = useRef(null)
-
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  
   const handleGenerate = async () => {
     if (!prompt.trim()) {
       alert("Please enter a prompt.")
@@ -30,7 +31,7 @@ function App() {
     setLoading(true)
     setStory(null) // Clear previous story
     try {
-      const res = await axios.post("http://localhost:5000/generate", {
+      const res = await axios.post(`${API_BASE_URL}/generate`, {
         prompt,
         temperature,
         max_length: maxLength,
